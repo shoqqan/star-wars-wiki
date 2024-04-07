@@ -19,6 +19,7 @@ export const fetchStarshipsFx = createEffect(async (starships: string[]) => {
     const promises = starships.map(url => fetch(url).then(res => res.json()));
     return Promise.all(promises);
 });
+
 export const $searchedFilm = createStore({info: {}, characters: [], planets: [], starships: []})
     .on(fetchFilmFx.doneData, (state, film) => ({
         ...state,
@@ -45,5 +46,6 @@ fetchFilmFx.doneData.watch((film) => {
         fetchCharactersFx(film.results[0].characters);
         fetchPlanetsFx(film.results[0].planets);
         fetchStarshipsFx(film.results[0].starships);
+        fetchSpe
     }
 });
