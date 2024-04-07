@@ -35,7 +35,12 @@ export const Films = () => {
             <div className="flex flex-wrap gap-5 p-10">
                 {films.map((el) => (
                     <div
-                        className={'w-52 h-80 flex flex-col justify-center gap-5 border border-gray-600 transition-all p-4 rounded-lg shadow-md relative cursor-pointer hover:border-green-500'}>
+                        key={el.episode_id}
+                        className={'w-52 h-80 flex flex-col justify-center gap-5 border border-gray-600 transition-all p-4 rounded-lg shadow-md relative cursor-pointer hover:border-green-500'}
+                        onClick={()=>{
+                            console.log(el.episode_id)
+                            navigate(`/film_info/${el.title}`)}}
+                    >
                         <h2 className={'font-semibold text-lg'}><span className={'font-bold'}>{el.title}</span></h2>
                         <p className={'text-sm text-gray-100'}>Episode: <span
                             className={'font-bold text-yellow-400'}>{el.episode_id}</span></p>
