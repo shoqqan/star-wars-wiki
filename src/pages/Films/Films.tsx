@@ -12,14 +12,14 @@ export const Films = () => {
     }, [])
     return (
         <div className="w-screen h-screen overflow-y-scroll flex flex-col gap-y-3 bg-black text-yellow-400">
-            <div className="flex justify-between px-4 py-4 border-b border-yellow-400 bg-black">
+            <div className="flex justify-between px-4 py-4 border-b border-yellow-400 bg-black lg:flex-col gap-5 fixed w-full z-30">
                 <h1 className="font-bold text-2xl text-yellow-400 cursor-pointer"
                     onClick={() => navigate('/films')}>Star Wars Wiki</h1>
                 <Input type={"film"} onSubmit={(title) => {
                     navigate(`/film_info/${title}`)
                 }}/>
             </div>
-            <div className={'w-full h-[50px] flex justify-evenly'}>
+            <div className={'w-full mt-36 h-[50px] flex justify-evenly'}>
                 <a className={'w-52 h-[50px] flex justify-center items-center border cursor-pointer border-none bg-yellow-400 text-black shadow-md rounded-lg'}
 
                 >Films</a>
@@ -38,7 +38,7 @@ export const Films = () => {
                    }}
                 >Starships</a>
             </div>
-            <div className="flex flex-wrap gap-5 p-10">
+            <div className="flex flex-wrap gap-5 p-10 justify-center">
                 {films.map((el) => (
                     <div
                         key={el.episode_id}

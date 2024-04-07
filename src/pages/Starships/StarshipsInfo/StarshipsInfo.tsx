@@ -14,7 +14,9 @@ export const StarshipsInfo = () => {
     }, [])
     return (
         <div className="w-screen h-screen overflow-y-scroll flex flex-col gap-y-3 bg-black text-yellow-400">
-            <Header/>
+            <div className="flex justify-between px-4 py-4 border-b border-yellow-400 bg-black">
+                <h1 className="font-bold text-2xl text-yellow-400 cursor-pointer" onClick={()=>navigate('/films')}>Star Wars Wiki</h1>
+            </div>
             <div className="flex flex-wrap gap-5 p-10">
                 {starship.info &&
                     <div

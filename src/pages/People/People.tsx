@@ -12,14 +12,14 @@ export const People = () => {
     }, [])
     return (
         <div className="w-screen h-screen overflow-y-scroll flex flex-col gap-y-3 bg-black text-yellow-400">
-            <div className="flex justify-between px-4 py-4 border-b border-yellow-400 bg-black">
+            <div className="flex justify-between px-4 py-4 border-b border-yellow-400 bg-black lg:flex-col gap-5 fixed w-full z-30">
                 <h1 className="font-bold text-2xl text-yellow-400 cursor-pointer"
                     onClick={() => navigate('/films')}>Star Wars Wiki</h1>
                 <Input type={"people"} onSubmit={(title) => {
                     navigate(`/people_info/${title}`)
                 }}/>
             </div>
-            <div className={'w-full h-[50px] flex justify-evenly'}>
+            <div className={'w-full h-[50px] mt-36 flex justify-evenly'}>
                 <a
                     className={'w-52 h-[50px] flex justify-center items-center border border-gray-600 shadow-md rounded-lg transition-all hover:bg-yellow-400 hover:text-black'}
                     onClick={() => {
@@ -45,7 +45,7 @@ export const People = () => {
 
                 >Starships</a>
             </div>
-            <div className="flex flex-wrap gap-5 p-10">
+            <div className="flex flex-wrap gap-5 p-10 justify-center">
                 {people.map((el) => (
                     <div
                         onClick={() => {

@@ -46,6 +46,5 @@ fetchFilmFx.doneData.watch((film) => {
         fetchCharactersFx(film.results[0].characters);
         fetchPlanetsFx(film.results[0].planets);
         fetchStarshipsFx(film.results[0].starships);
-        fetchSpe
     }
 });

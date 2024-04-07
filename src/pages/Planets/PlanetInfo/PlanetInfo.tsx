@@ -48,7 +48,7 @@ export const PlanetInfo = () => {
                             <p className={"text-sm text-gray-100"}>Residents: <span
                                 className={'font-bold text-yellow-400'}>
                             {planet.residents.map((el) => (
-                                <span key={el} className={"underline transition-all hover:text-emerald-500"}>{el}, </span>
+                                <span key={el} onClick={()=>navigate(`/people_info/${el}`)} className={"underline transition-all hover:text-emerald-500"}>{el}, </span>
                             ))}
                         </span></p>
 

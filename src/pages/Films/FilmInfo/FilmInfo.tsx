@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react';
-import {Header} from "../../../components/Header/Header.tsx";
 import {useUnit} from "effector-react";
 import {$searchedFilm, fetchFilmFx} from "./model.ts";
 import {useNavigate, useParams} from "react-router-dom";
@@ -13,7 +12,10 @@ export const FilmInfo = () => {
     }, [])
     return (
         <div className="w-screen h-screen overflow-y-scroll flex flex-col gap-y-3 bg-black text-yellow-400">
-            <Header/>
+            <div className="flex justify-between px-4 py-4 border-b border-yellow-400 bg-black">
+                <h1 className="font-bold text-2xl text-yellow-400 cursor-pointer"
+                    onClick={() => navigate('/films')}>Star Wars Wiki</h1>
+            </div>
             <div className="flex flex-wrap gap-5 p-10">
                 {film.info &&
                     <div
@@ -34,6 +36,7 @@ export const FilmInfo = () => {
                                 className={'font-bold text-yellow-400'}>
                             {film.characters.map((el) => (
                                 <span key={el}
+                                      onClick={() => navigate(`/people_info/${el}`)}
                                       className={"underline transition-all hover:text-emerald-500"}>{el}, </span>
                             ))}
                         </span></p>
@@ -64,7 +67,7 @@ export const FilmInfo = () => {
                     </div>
                 }
                 {!film.info &&
-                <div>Film not found :(</div>
+                    <div>Film not found :(</div>
                 }
             </div>
         </div>
