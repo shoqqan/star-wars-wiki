@@ -11,9 +11,21 @@
 Goals 👉 Create a separate wiki on the internet for the Star Wars fans and guys who interested in Star Wars.</p>
 Tasks ✔️ Release the Wiki Website for fans and interested people, where users can explore and check information about their favorite characters.</p>
 <br>
- Website language is: </p>
+ Website language: </p>
 <b>English</b> </p>
  <br>
+<p>During development, i chose a <b>conventional</b> architecture in React because the project is small and it doesn't make sense to use feature-sliced design.</p>
+<br>
+<p>So we have several reasons why i use <b>Effector</b> instead of Redux</p>
+<ul>
+  <li>A slided stores better then monolit store</li>
+  <li>Highly optimised</li>
+  <li>Reactive programming</li>
+  <li>Out-of-box TypeScript support</li>
+</ul>
+
+
+<hr>
 🌐 Live Demo: <a href='https://star-wars-wiki-rosy.vercel.app/'>Live Demo</a>
 
 <h3>Build with:</h3>
