@@ -1,30 +1,46 @@
-# React + TypeScript + Vite
+<div align='center'><img style="width:30%" src='https://github.com/shoqqan/family-talk/assets/108088790/93e843bd-4932-427a-b57d-57c591e5441c'/></div>
+<h2>About the project</h2>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+  <p>A <b>Star Wars Wiki</b> website is a website that allows users to expolore the univers of Star Wars. The website provides an easy-to-use interface for exploring planets, characters, films and STARSHIPS!
+  
+  Star Wars Wiki is connected to the StarWarsAPI, which is a popular source of data for Star Wars information. Star Wars provides data on thousands of films and character, including their information, planets, and other important information. By using this API, the website can provide users with real-time information about the Star Wars universe.
+  </p>
 
-Currently, two official plugins are available:
+  <br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Goals 👉 Create a separate wiki on the internet for the Star Wars fans and guys who interested in Star Wars.</p>
+Tasks ✔️ Release the Wiki Website for fans and interested people, where users can explore and check information about their favorite characters.</p>
+<br>
+ Website language is: </p>
+<b>English</b> </p>
+ <br>
+🌐 Live Demo: <a href='https://star-wars-wiki-rosy.vercel.app/'>Live Demo</a>
 
-## Expanding the ESLint configuration
+<h3>Build with:</h3>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+»  <a href='https://www.typescriptlang.org/'>TypeScript</a> <br>
+»  <a href='https://react.dev/'>ReactTS</a> <br>
+»  <a href='https://effector.dev/'>Effector</a> <br>
+»  <a href='https://tailwindcss.com/'>TailwindCSS</a> <br>
+»  <a href='https://swapi.dev/'>The Star Wars API</a> <br>
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<h2>Screenshots of the Project 📸</h2>
+<br>
+<h3 align='center'>4 main sections: Films, Planets, People, Starships. You can find object in this sections by search 🏬</h3>
+
+<div align='center'>
+<img src='https://github.com/shoqqan/findFilmKZ/assets/108088790/392165e7-c4b1-4d41-ab4e-719191438f0f'/>
+
+</div>
+<h3 align='center'>Pages about each object with extensive information, characters, planets, starships</h3>
+
+<div align='center'>
+<img src='https://github.com/shoqqan/findFilmKZ/assets/108088790/7ae457c3-84f2-4772-a212-47cfcf13ea57'/>
+
+</div>
+<br>
+
+
+
