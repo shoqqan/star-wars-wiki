@@ -14,7 +14,8 @@ Tasks ✔️ Release the Wiki Website for fans and interested people, where user
  Website language: </p>
 <b>English</b> </p>
  <br>
-<p>During development, i chose a <b>conventional</b> architecture in React because the project is small and it doesn't make sense to use feature-sliced design.</p>
+<p>During development, i chose a <b>feature-sliced design</b> architecture in React because the each architectural component has its purpose and predictable dependencies.
+This keeps a balance between following the DRY principle and adaptation possibilities.</p>
 <br>
 <p>So we have several reasons why i use <b>Effector</b> instead of Redux</p>
 <ul>
