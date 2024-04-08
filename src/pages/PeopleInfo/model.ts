@@ -28,9 +28,7 @@ export const $characterInfo = createStore({info: {}, films: [], home: "", specie
     .on(fetchCharacterFx.doneData, (state, characters) => ({
         ...state,
         info: characters.results[0],
-        // Note that we don't call fetchCharacters here. It's a side effect that should be handled separately.
     }))
-    // Handle the completion of character fetching.
     .on(fetchSpeciesFx.doneData, (state, characters) => ({
         ...state,
         species: characters.map(el => el.name),
@@ -48,7 +46,6 @@ export const $characterInfo = createStore({info: {}, films: [], home: "", specie
         ...state, home: home.name
     }))
 
-// When the film fetching is done, trigger the character fetching.
 fetchCharacterFx.doneData.watch((film) => {
     if (film.results.length > 0) {
         fetchFilmsFx(film.results[0].films);

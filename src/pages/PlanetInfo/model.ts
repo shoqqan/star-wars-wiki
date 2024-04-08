@@ -21,9 +21,7 @@ export const $searchedPlanet = createStore({info: {}, films: [], residents: []})
     .on(fetchPlanetFx.doneData, (state, film) => ({
         ...state,
         info: film.results[0],
-        // Note that we don't call fetchCharacters here. It's a side effect that should be handled separately.
     }))
-    // Handle the completion of character fetching.
     .on(fetchFilmsFx.doneData, (state, films) => ({
         ...state,
         films: films.map(el => el.title),
@@ -34,7 +32,6 @@ export const $searchedPlanet = createStore({info: {}, films: [], residents: []})
     }))
 
 
-// When the film fetching is done, trigger the character fetching.
 fetchPlanetFx.doneData.watch((film) => {
     if (film.results.length > 0) {
         fetchFilmsFx(film.results[0].films);
