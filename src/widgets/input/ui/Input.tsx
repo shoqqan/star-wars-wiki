@@ -1,5 +1,5 @@
 import React, {ChangeEvent, useState} from "react";
-import {ROUTES} from "../../models/routes.ts";
+import {ROUTES} from "../../../models/routes.ts";
 
 interface InputProps {
     onSubmit: (title: string) => void

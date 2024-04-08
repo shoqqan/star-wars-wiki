@@ -1,7 +1,7 @@
 import React, {useEffect} from 'react';
 import {useUnit} from "effector-react";
 import {useNavigate, useParams} from "react-router-dom";
-import {$characterInfo, fetchCharacterFx} from "./model.ts";
+import {$characterInfo, fetchCharacterFx} from "../model.ts";
 import {ROUTES} from "../../../models/routes.ts";
 
 export const PeopleInfo = () => {

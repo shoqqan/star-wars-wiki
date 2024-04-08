@@ -1,5 +1,5 @@
 import {useEffect} from "react";
-import {$films, fetchFilmsFx} from "./model.ts";
+import {$films, fetchFilmsFx} from "../model.ts";
 import {useUnit} from "effector-react";
 import {useNavigate} from "react-router-dom";
 
@@ -16,7 +16,6 @@ export const Films = () => {
                     key={el.episode_id}
                     className={'w-52 h-80 flex flex-col justify-center gap-5 border border-gray-600 transition-all p-4 rounded-lg shadow-md relative cursor-pointer hover:border-green-500'}
                     onClick={() => {
-                        console.log(el.episode_id)
                         navigate(`/film_info/${el.title}`)
                     }}
                 >

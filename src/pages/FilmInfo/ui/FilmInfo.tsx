@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {useUnit} from "effector-react";
-import {$searchedFilm, fetchFilmFx} from "./model.ts";
+import {$searchedFilm, fetchFilmFx} from "../model.ts";
 import {useNavigate, useParams} from "react-router-dom";
 import {ROUTES} from "../../../models/routes.ts";
 

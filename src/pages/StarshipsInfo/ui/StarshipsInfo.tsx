@@ -1,14 +1,13 @@
 import React, {useEffect} from 'react';
 import {useNavigate, useParams} from "react-router-dom";
 import {useUnit} from "effector-react";
-import {$starshipInfo, fetchStarshipFx} from "./model.ts";
+import {$starshipInfo, fetchStarshipFx} from "../model.ts";
 import {ROUTES} from "../../../models/routes.ts";
 
 export const StarshipsInfo = () => {
     const params = useParams()
     const starship = useUnit($starshipInfo)
     const navigate = useNavigate()
-    console.log(starship)
     useEffect(() => {
         fetchStarshipFx(params.id)
     }, [])

@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {useUnit} from "effector-react";
-import {$searchedPlanet, fetchPlanetFx} from "./model.ts";
+import {$searchedPlanet, fetchPlanetFx} from "../model.ts";
 import {useNavigate, useParams} from "react-router-dom";
 import {ROUTES} from "../../../models/routes.ts";
 

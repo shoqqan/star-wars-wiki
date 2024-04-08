@@ -1,0 +1,1 @@
+export {StarshipsInfo} from "./ui/StarshipsInfo"

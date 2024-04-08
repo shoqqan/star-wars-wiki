@@ -1,13 +1,12 @@
-import {useState} from "react";
 import {Outlet, useNavigate} from "react-router-dom";
-import {Input} from "../../../components/Input/Input.tsx";
+import {Input} from "../../../widgets/input";
 import {ROUTES} from "../../../models/routes.ts";
-import {sectionsData} from "../index.ts";
+import {$section, sectionsData, setSection} from "../model.ts";
+import {useUnit} from "effector-react";
 
 export const Home = () => {
-    const [section, setSection] = useState<ROUTES>(ROUTES.FILMS)
     const navigate = useNavigate()
-
+    const section = useUnit($section)
     const selectedStyle = "w-52 h-[50px] flex justify-center font-bold items-center border cursor-pointer border-none bg-yellow-400 text-black shadow-md rounded-lg"
     const notSelectedStyle = 'w-52 flex justify-center items-center border border-gray-600 cursor-pointer shadow-md rounded-lg transition-all hover:bg-yellow-400 hover:text-black'
     return (
