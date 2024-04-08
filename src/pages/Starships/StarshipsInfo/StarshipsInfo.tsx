@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
 import {useNavigate, useParams} from "react-router-dom";
 import {useUnit} from "effector-react";
-import {Header} from "../../../components/Header/Header.tsx";
 import {$starshipInfo, fetchStarshipFx} from "./model.ts";
+import {ROUTES} from "../../../models/routes.ts";
 
 export const StarshipsInfo = () => {
     const params = useParams()
@@ -15,7 +15,8 @@ export const StarshipsInfo = () => {
     return (
         <div className="w-screen h-screen overflow-y-scroll flex flex-col gap-y-3 bg-black text-yellow-400">
             <div className="flex justify-between px-4 py-4 border-b border-yellow-400 bg-black">
-                <h1 className="font-bold text-2xl text-yellow-400 cursor-pointer" onClick={()=>navigate('/films')}>Star Wars Wiki</h1>
+                <h1 className="font-bold text-2xl text-yellow-400 cursor-pointer"
+                    onClick={() => navigate(`/home/${ROUTES.STARSHIPS}`)}>Star Wars Wiki</h1>
             </div>
             <div className="flex flex-wrap gap-5 p-10">
                 {starship.info &&
@@ -61,7 +62,7 @@ export const StarshipsInfo = () => {
                     </div>
                 }
                 {!starship.info &&
-                <div>Starship not found :(</div>
+                    <div>Starship not found :(</div>
                 }
 
             </div>

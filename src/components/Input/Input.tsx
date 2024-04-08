@@ -1,8 +1,9 @@
 import React, {ChangeEvent, useState} from "react";
+import {ROUTES} from "../../models/routes.ts";
 
 interface InputProps {
     onSubmit: (title: string) => void
-    type: "starships" | "people" | "planet" | "film"
+    type: ROUTES
 }
 
 export const Input = React.memo(function (props: InputProps) {
