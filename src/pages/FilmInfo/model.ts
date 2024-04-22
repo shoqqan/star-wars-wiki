@@ -1,7 +1,7 @@
 import {createEffect, createStore} from 'effector';
 
 export const fetchFilmFx = createEffect(async (id: string) => {
-    const url = `https://swapi.dev/api/films/?search=${id}`;
+    const url = `https://www.swapi.tech/api/films/?name=${id}`;
     const req = await fetch(url);
     return req.json();
 });
@@ -23,28 +23,28 @@ export const fetchStarshipsFx = createEffect(async (starships: string[]) => {
 export const $searchedFilm = createStore({info: {}, characters: [], planets: [], starships: []})
     .on(fetchFilmFx.doneData, (state, film) => ({
         ...state,
-        info: film.results[0],
+        info: film.result[0].properties,
         // Note that we don't call fetchCharacters here. It's a side effect that should be handled separately.
     }))
     // Handle the completion of character fetching.
     .on(fetchCharactersFx.doneData, (state, characters) => ({
         ...state,
-        characters: characters.map(el => el.name),
+        characters: characters.map(el => el.result.properties.name),
     }))
     .on(fetchPlanetsFx.doneData, (state, planets) => ({
         ...state,
-        planets: planets.map(el => el.name),
+        planets: planets.map(el => el.result.properties.name),
     }))
     .on(fetchStarshipsFx.doneData, (state, starships) => ({
         ...state,
-        starships: starships.map(el => el.name),
+        starships: starships.map(el => el.result.properties.name),
     }))
 
 // When the film fetching is done, trigger the character fetching.
 fetchFilmFx.doneData.watch((film) => {
-    if (film.results.length > 0) {
-        fetchCharactersFx(film.results[0].characters);
-        fetchPlanetsFx(film.results[0].planets);
-        fetchStarshipsFx(film.results[0].starships);
+    if (film.result.length > 0) {
+        fetchCharactersFx(film.result[0].properties.characters);
+        fetchPlanetsFx(film.result[0].properties.planets);
+        fetchStarshipsFx(film.result[0].properties.starships);
     }
 });

@@ -23,7 +23,3 @@ export const $section = createStore<ROUTES>(localStorage.getItem("section")?loca
         localStorage.setItem('section', section)
         return section
     })
-
-$section.watch((state) => {
-    console.log(state)
-})
